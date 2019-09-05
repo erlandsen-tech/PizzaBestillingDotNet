@@ -1,0 +1,42 @@
+﻿@model PizzaBestilling.Models.BestillingerViewModel
+
+@{
+    ViewBag.Title = "Bestillinger";
+}
+
+<h2>Bestillinger</h2>
+<p>
+    <a href="/Home/Index">Til bestilling</a>
+</p>
+<table class="table">
+    <tr>
+        <th>PizzaType</th>
+        <th>Tykkelse</th>
+        <th>Antall</th>
+        <th>Navn</th>
+        <th>Adresse</th>
+        <th>Telefonnummer</th>
+    </tr>
+    @{
+        for (var i = 0; i < Model.AlleBestillinger.Count(); i++)
+        {
+            <tr>
+                <td>@Model.AlleBestillinger[i].PizzaType</td>
+                <td>@Model.AlleBestillinger[i].Tykkelse</td>
+                <td>@Model.AlleBestillinger[i].Antall</td>
+                @foreach (PizzaBestilling.Models.Kunde kunde in Model.AlleKunder)
+                {
+                    if (kunde.Id == Model.AlleBestillinger[i].KundeId)
+                    {
+                        <td>@kunde.Navn</td>
+                        <td>@kunde.Adresse</td>
+                        <td>@kunde.Telefonnr</td>
+                    }
+                }
+            <td>
+                <a href="/home/slett?Id=@Model.AlleBestillinger[i].Id" >Slett</a>
+            </td>
+            </tr>
+        }
+    }
+</table>

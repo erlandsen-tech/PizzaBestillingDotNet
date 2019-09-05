@@ -1,0 +1,54 @@
+﻿@model PizzaBestilling.Models.BestillingerModel
+
+@{
+    ViewBag.Title = "Bestilling";
+}
+<h2>Bestilling</h2>
+
+
+<form action="/Home/Bestill" method="post">
+    <table>
+        <tr>
+            <td>PizzaType</td>
+            <td>
+                <select name="BestillingModell.PizzaType">
+                    <option>Margarita (100kr)</option>
+                    <option>Pizza Bianca (50kr)</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Tykkelse
+            </td>
+            <td>
+                <input type="radio" name="BestillingModell.Tykkelse" value="tykk" /> Tykk <br />
+                <input type="radio" name="BestillingModell.Tykkelse" value="tynn" /> Tynn <br />
+            </td>
+        </tr>
+        <tr>
+            <td>Antall</td>
+            <td>
+                <input type="text" name="BestillingModell.Antall" />
+            </td>
+        </tr>
+        <tr>
+            <td> Navn </td>
+            <td> <input type="text" name="KundeModell.Navn" /></td>
+        </tr>
+        <tr>
+            <td> Adresse </td>
+            <td> <input type="text" name="KundeModell.Adresse" /></td>
+        </tr>
+        <tr>
+            <td> Telefonnr </td>
+            <td> <input type="text" name="KundeModell.Telefonnr" /></td>
+        </tr>
+    </table>
+
+    <input type="submit" name="Bestill" value="Bestill" />
+</form>
+
+<div>
+    @Html.ActionLink("Startside", "Index")
+</div>
