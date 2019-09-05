@@ -126,7 +126,6 @@
     <Compile Include="Logic\DBLogic.cs" />
     <Compile Include="Logic\IDBLogic.cs" />
     <Compile Include="Models\Pizza.cs" />
-    <Compile Include="Models\BestillingerModel.cs" />
     <Compile Include="Models\BestillingerViewModel.cs" />
     <Compile Include="Models\Kunde.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,7 +146,6 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Home\Bestillinger.cshtml" />
-    <Content Include="Views\Home\OldBestilling.cshtml" />
     <Content Include="Views\Home\Bestilling.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

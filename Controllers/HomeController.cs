@@ -63,7 +63,7 @@ namespace PizzaBestilling.Controllers
                     return RedirectToAction("Bestillinger");
                 }
             }
-            return RedirectToAction("Bestilling");
+            return View("Bestilling");
         }
     }
 }
